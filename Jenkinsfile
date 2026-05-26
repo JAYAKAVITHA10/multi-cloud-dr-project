@@ -2,10 +2,10 @@ pipeline {
     agent any
     stages {
         stage('Clone Repository') {
-            steps {
-                git 'https://github.com/JAYAKAVITHA10/multi-cloud-dr-project.git'
-            }
-        }
+    steps {
+        git branch: 'main', url: 'https://github.com/JAYAKAVITHA10/multi-cloud-dr-project.git'
+    }
+}
         stage('Deploy to AWS') {
             steps {
                 sh '''
